@@ -33,6 +33,6 @@ archives:
 
 release:
   github:
-    owner: kutovoys
+    owner: dtkoe
     name: marzban-torrent-blocker
   name_template: "v{{ .Version }}"
