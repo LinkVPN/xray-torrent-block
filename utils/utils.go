@@ -136,7 +136,7 @@ func BlockIP(ip string) {
 	var cmd *exec.Cmd
 
 	if config.BlockMode == "iptables" {
-		cmd = exec.Command("iptables", "-I", "INPUT", "-s", ip, "-j", "DROP")
+		cmd = exec.Command("iptables", "-t", "raw", "-I", "PREROUTING", "-s", ip, "-j", "DROP")
 	} else {
 		cmd = exec.Command("ufw", "insert", "1", "deny", "from", ip, "to", "any")
 	}
@@ -153,7 +153,7 @@ func UnblockIPAfterDelay(ip string, delay time.Duration, username string) {
 	var cmd *exec.Cmd
 
 	if config.BlockMode == "iptables" {
-		cmd = exec.Command("iptables", "-D", "INPUT", "-s", ip, "-j", "DROP")
+		cmd = exec.Command("iptables", "-t", "raw", "-D", "PREROUTING", "-s", ip, "-j", "DROP")
 	} else {
 		cmd = exec.Command("ufw", "delete", "deny", "from", ip, "to", "any")
 	}
