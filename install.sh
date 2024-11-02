@@ -79,7 +79,7 @@ if $ask_for_input; then
 fi
 
 echo "Setting up systemd service..."
-curl -sL https://raw.githubusercontent.com/kutovoys/marzban-torrent-blocker/main/torrent-blocker.service -o /etc/systemd/system/torrent-blocker.service
+curl -sL https://raw.githubusercontent.com/dtkoe/marzban-torrent-blocker/main/torrent-blocker.service -o /etc/systemd/system/torrent-blocker.service
 
 systemctl daemon-reload
 systemctl enable torrent-blocker
