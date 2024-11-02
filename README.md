@@ -91,7 +91,7 @@ To automatically install the application, follow these steps:
 
 - Run the installation script:
   ```bash
-  bash <(curl -fsSL git.new/install)
+  bash <(curl -fsSL https://raw.githubusercontent.com/dtkoe/marzban-torrent-blocker/main/install.sh)
   ```
 - The script will automatically install all dependencies, download the latest release, ask for the admin `Token` and `Chat ID`, and start the service.
 - After installation, you can control the application via systemd:
