@@ -3,7 +3,7 @@
 [![en](https://img.shields.io/badge/lang-en-red)](https://github.com/kutovoys/marzban-torrent-blocker/blob/main/README.md)
 [![ru](https://img.shields.io/badge/lang-ru-blue)](https://github.com/kutovoys/marzban-torrent-blocker/blob/main/README.ru.md)
 
-Torrent Blocker is an application designed to block torrent usage by users of the [Marzban](https://github.com/Gozargah/Marzban) panel. The application analyzes logs, detects torrent activity, and temporarily blocks the user, sending notifications to the administrator via Telegram, and optionally to the user.
+Torrent Blocker is an application designed to block torrent usage by users of the  panel. The application analyzes logs, detects torrent activity, and temporarily blocks the user, sending notifications to the administrator via Telegram, and optionally to the user.
 It can also work with other panels and directly with Xray.
 
 ## Features:
