@@ -1,4 +1,4 @@
-# Marzban Torrent Blocker
+# Torrent Blocker
 
 [![en](https://img.shields.io/badge/lang-en-red)](https://github.com/kutovoys/marzban-torrent-blocker/blob/main/README.md)
 [![ru](https://img.shields.io/badge/lang-ru-blue)](https://github.com/kutovoys/marzban-torrent-blocker/blob/main/README.ru.md)
