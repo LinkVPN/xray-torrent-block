@@ -64,19 +64,7 @@ check_placeholder() {
   grep -q "$key: \"ADMIN_" "$CONFIG_PATH"
 }
 
-ask_for_input=true
-if ! check_placeholder "AdminBotToken" && ! check_placeholder "AdminChatID"; then
-  ask_for_input=false
-  echo "Admin bot token and Chat ID are already set in the config. Skipping input."
-fi
-
-if $ask_for_input; then
-  read -p "Enter the Telegram admin bot token: " admin_bot_token
-  read -p "Enter the admin Chat ID: " admin_chat_id
-
-  sed -i "s/ADMIN_BOT_TOKEN/$admin_bot_token/" "$CONFIG_PATH"
-  sed -i "s/ADMIN_CHAT_ID/$admin_chat_id/" "$CONFIG_PATH"
-fi
+ask_for_input=false
 
 echo "Setting up systemd service..."
 curl -sL https://raw.githubusercontent.com/dtkoe/marzban-torrent-blocker/main/torrent-blocker.service -o /etc/systemd/system/torrent-blocker.service
