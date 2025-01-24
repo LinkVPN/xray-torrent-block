@@ -33,6 +33,6 @@ archives:
 
 release:
   github:
-    owner: dtkoe
-    name: marzban-torrent-blocker
+    owner: LinkVPN
+    name: xray-torrent-block
   name_template: "v{{ .Version }}"
