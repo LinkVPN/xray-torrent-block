@@ -1,7 +1,7 @@
 # Marzban Torrent Blocker
 
-[![en](https://img.shields.io/badge/lang-en-red)](https://github.com/kutovoys/marzban-torrent-blocker/blob/main/README.md)
-[![ru](https://img.shields.io/badge/lang-ru-blue)](https://github.com/kutovoys/marzban-torrent-blocker/blob/main/README.ru.md)
+[![en](https://img.shields.io/badge/lang-en-red)](https://github.com/LinkVPN/xray-torrent-block/blob/main/README.md)
+[![ru](https://img.shields.io/badge/lang-ru-blue)](https://github.com/LinkVPN/xray-torrent-block/blob/main/README.ru.md)
 
 Marzban Torrent Blocker — это приложение для блокировки использования торрентов пользователями панели [Marzban](https://github.com/Gozargah/Marzban). Приложение анализирует логи, обнаруживает использование торрентов и временно блокирует пользователя, отправляя уведомления в Telegram администратору и, опционально, пользователю.
 Возможна работа и с другими панелями. А также напрямую с Xray.
@@ -91,7 +91,7 @@ volumes:
 
 - Запустите скрипт установки:
   ```bash
-  bash <(curl -fsSL git.new/install)
+  bash <(curl -fsSL https://raw.githubusercontent.com/LinkVPN/xray-torrent-block/main/install.sh)
   ```
 - Скрипт автоматически установит все зависимости, скачает последний релиз, спросит `Token` и `Chat ID` администратора и запустит сервис.
 - После завершения установки приложение можно контролировать через systemd:
