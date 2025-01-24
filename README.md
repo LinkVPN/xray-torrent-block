@@ -1,7 +1,7 @@
 # Torrent Blocker
 
-[![en](https://img.shields.io/badge/lang-en-red)](https://github.com/kutovoys/marzban-torrent-blocker/blob/main/README.md)
-[![ru](https://img.shields.io/badge/lang-ru-blue)](https://github.com/kutovoys/marzban-torrent-blocker/blob/main/README.ru.md)
+[![en](https://img.shields.io/badge/lang-en-red)](https://github.com/LinkVPN/xray-torrent-block/blob/main/README.md)
+[![ru](https://img.shields.io/badge/lang-ru-blue)](https://github.com/LinkVPN/xray-torrent-block/blob/main/README.ru.md)
 
 Torrent Blocker is an application designed to block torrent usage by users of the  panel. The application analyzes logs, detects torrent activity, and temporarily blocks the user, sending notifications to the administrator via Telegram, and optionally to the user.
 It can also work with other panels and directly with Xray.
@@ -53,20 +53,20 @@ It can also work with other panels and directly with Xray.
   ```
   Unfortunately, this blocking only effectively handles about 20% of bittorrent traffic.
 
-### Marzban Configuration
+###  Configuration
 
-- On the server where the panel is hosted, create the folder `/var/lib/marzban-node`:
+- On the server where the panel is hosted, create the folder `/var/lib/-node`:
 
   ```bash
-  mkdir -p /var/lib/marzban-node
+  mkdir -p /var/lib/-node
   ```
 
-- Add a new volume to the `/opt/marzban/docker-compose.yml` file:
+- Add a new volume to the `/opt//docker-compose.yml` file:
 
   ```yaml
   volumes:
-    - /var/lib/marzban:/var/lib/marzban
-    - /var/lib/marzban-node:/var/lib/marzban-node #новый volume
+    - /var/lib/:/var/lib/
+    - /var/lib/-node:/var/lib/-node #новый volume
   ```
 
 - Restart the panel with the following command:
@@ -80,7 +80,7 @@ Ensure that the volume is correctly mounted in `docker-compose.yml`:
 
 ```yaml
 volumes:
-  - /var/lib/marzban-node:/var/lib/marzban-node
+  - /var/lib/-node:/var/lib/-node
 ```
 
 By default, this volume is present, ensuring logs are accessible on the host.
@@ -91,7 +91,7 @@ To automatically install the application, follow these steps:
 
 - Run the installation script:
   ```bash
-  bash <(curl -fsSL https://raw.githubusercontent.com/dtkoe/marzban-torrent-blocker/main/install.sh)
+  bash <(curl -fsSL https://raw.githubusercontent.com/LinkVPN/xray-torrent-block/main/install.sh)
   ```
 - The script will automatically install all dependencies, download the latest release, ask for the admin `Token` and `Chat ID`, and start the service.
 - After installation, you can control the application via systemd:
