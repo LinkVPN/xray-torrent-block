@@ -72,8 +72,6 @@ systemctl daemon-reload
 systemctl enable torrent-blocker
 systemctl start torrent-blocker
 
-systemctl status torrent-blocker --no-pager
-
 echo ""
 echo "==============================================================="
 echo ""
