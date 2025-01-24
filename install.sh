@@ -38,15 +38,15 @@ else
 fi
 
 echo "Downloading the latest version of torrent-blocker..."
-LATEST_RELEASE=$(curl -sL https://api.github.com/repos/LinkVPN/marzban-torrent-blocker/releases/latest | grep tag_name | cut -d '"' -f 4)
-URL="https://github.com/LinkVPN/marzban-torrent-blocker/releases/download/${LATEST_RELEASE}/marzban-torrent-blocker-${LATEST_RELEASE}-linux-${ARCH}.tar.gz"
+LATEST_RELEASE=$(curl -sL https://api.github.com/repos/LinkVPN/xray-torrent-block/releases/latest | grep tag_name | cut -d '"' -f 4)
+URL="https://github.com/LinkVPN/xray-torrent-block/releases/download/${LATEST_RELEASE}/xray-torrent-block-${LATEST_RELEASE}-linux-${ARCH}.tar.gz"
 
-curl -sL "$URL" -o torrent-blocker.tar.gz
+curl -sL "$URL" -o /opt/torrent-blocker.tar.gz
 
 echo "Extracting files..."
 mkdir -p /opt/torrent-blocker
-tar -xzf torrent-blocker.tar.gz -C /opt/torrent-blocker --overwrite
-rm torrent-blocker.tar.gz
+tar -xzf /opt/torrent-blocker.tar.gz -C /opt/torrent-blocker --overwrite
+rm /opt/torrent-blocker.tar.gz
 
 CONFIG_PATH="/opt/torrent-blocker/config.yaml"
 CONFIG_TEMPLATE_PATH="/opt/torrent-blocker/config.yaml.example"
