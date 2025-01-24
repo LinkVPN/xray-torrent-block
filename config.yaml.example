@@ -1,6 +1,6 @@
 # Обязательный. Путь к файлу логов, который будет мониториться.
 # Required. Path to the log file to be monitored.
-LogFile: "/var/lib/marzban-node/access.log"
+LogFile: "/var/log/xray/xray_access.log"
 
 # Обязательный. Продолжительность блокировки IP-адреса в минутах.
 # Required. Duration of IP address blocking in minutes.
@@ -50,7 +50,7 @@ BotToken: "BOT_TOKEN"
 # Обязательно, если включена опция SendUserMessage.
 # Optional. Regular expression to extract user identifier (Telegram chat ID) from the log entry.
 # Required if SendUserMessage is enabled.
-TidRegex: "tgid-(\\d+)"
+TidRegex: "email: \\d+\\.(\\d+)"
 
 # Опциональный. Шаблон сообщения для пользователя.
 # Если не задано, будет использоваться сообщение по умолчанию. Можно использовать \n для переноса строки.
@@ -62,4 +62,4 @@ UserMessageTemplate: ""
 # Если не задано, используется значение по умолчанию: "email: \\d+\\.(\\S+)". Можно оттюнить вывод имени пользователя.
 # Optional. Regular expression to extract the username from the log entry.
 # If not specified, the default value is used: "email: \\d+\\.(\\S+)". You can tweak the username extraction.
-UsernameRegex: "email: \\d+\\.(\\S+)"
+UsernameRegex: "email: \\d+\\.(\\d+)"
