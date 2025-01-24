@@ -19,8 +19,7 @@ elif command -v dnf &> /dev/null; then
 elif command -v pacman &> /dev/null; then
   pacman -Sy --noconfirm ufw curl > /dev/null
 else
-  echo "Unable to determine package manager. Please install ufw and curl manually."
-  exit 1
+  echo "Iptables will be used. Please install ufw and curl manually."
 fi
 
 if systemctl is-active --quiet torrent-blocker; then
@@ -67,7 +66,7 @@ check_placeholder() {
 ask_for_input=false
 
 echo "Setting up systemd service..."
-curl -sL https://raw.githubusercontent.com/dtkoe/marzban-torrent-blocker/main/torrent-blocker.service -o /etc/systemd/system/torrent-blocker.service
+curl -sL https://github.com/LinkVPN/xray-torrent-block/raw/refs/heads/main/torrent-blocker.service -o /etc/systemd/system/torrent-blocker.service
 
 systemctl daemon-reload
 systemctl enable torrent-blocker
