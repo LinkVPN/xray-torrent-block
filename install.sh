@@ -38,8 +38,8 @@ else
 fi
 
 echo "Downloading the latest version of torrent-blocker..."
-LATEST_RELEASE=$(curl -sL https://api.github.com/repos/dtkoe/marzban-torrent-blocker/releases/latest | grep tag_name | cut -d '"' -f 4)
-URL="https://github.com/dtkoe/marzban-torrent-blocker/releases/download/${LATEST_RELEASE}/marzban-torrent-blocker-${LATEST_RELEASE}-linux-${ARCH}.tar.gz"
+LATEST_RELEASE=$(curl -sL https://api.github.com/repos/LinkVPN/marzban-torrent-blocker/releases/latest | grep tag_name | cut -d '"' -f 4)
+URL="https://github.com/LinkVPN/marzban-torrent-blocker/releases/download/${LATEST_RELEASE}/marzban-torrent-blocker-${LATEST_RELEASE}-linux-${ARCH}.tar.gz"
 
 curl -sL "$URL" -o torrent-blocker.tar.gz
 
